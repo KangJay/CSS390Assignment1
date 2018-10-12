@@ -1,0 +1,5 @@
+Just some general context: 
+-->"masteroutput.txt" is a direct copy and paste from https://courses.washington.edu/css390/2018-q4/assignment-01.html. and is used for diff comparison. 
+--> output.txt is used to hold the output of the script for diff comparison. 
+-->hw1script is a bash script that'll strip the output contents from the Music directory and format as specificed in the assignment.  
+-->RUN will run hw1script and diff compare the two outputs

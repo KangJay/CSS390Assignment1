@@ -1,0 +1,3 @@
+#!/bin/bash
+./hw1script > output.txt
+diff masteroutput.txt output.txt

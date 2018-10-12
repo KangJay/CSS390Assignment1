@@ -1,0 +1,21 @@
+#!/bin/bash
+#Author: Ji Kang
+
+#Total Track Portion
+echo -n Total Tracks:' ' 
+grep -o -r -c '.ogg' Music | wc -l
+printf "\n"
+
+#Total Artists Portion
+echo -n Total Artists:' ' 
+find Music | cut -d '/' -f3  | sed -n '1!p' | sort | uniq | sed '/^\s*$/d' | wc -l
+printf "\n"
+
+#Multi-Genre Artists Portion
+echo Multi-Genre Artists:
+find Music | cut -d '/' -f-2,-3 | uniq | cut -d '/' -f3 | sort | uniq -d | sed '/^\s*$/d'
+printf "\n"
+
+#Multi-Disk Albums Portion
+echo Multi-Disk Albums:
+find . -name dis\* | sort | cut -d '/' -f5 | uniq | LC_COLLATE=C sort
